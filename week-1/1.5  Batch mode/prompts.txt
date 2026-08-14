@@ -1,0 +1,20 @@
+Explain what an API is.
+Explain what FastAPI is.
+Explain what HTTP is.
+Explain what HTTPX is.
+Explain what async programming is.
+Explain what a database is.
+Explain what PostgreSQL is.
+Explain what Redis is.
+Explain what Docker is.
+Explain what microservices are.
+Explain what REST API means.
+Explain what JSON is.
+Explain what authentication is.
+Explain what authorization is.
+Explain what JWT is.
+Explain what middleware is.
+Explain what dependency injection is.
+Explain what SQLAlchemy is.
+Explain what an ORM is.
+Explain what an API gateway is.
