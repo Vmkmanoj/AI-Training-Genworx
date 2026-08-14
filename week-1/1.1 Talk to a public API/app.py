@@ -1,6 +1,12 @@
 import httpx
+from dotenv import load_dotenv
 
-url = "https://api.open-meteo.com/v1/forecast"
+load_dotenv()
+
+import os
+
+
+urlforecast = os.getenv("urlforecast")
 
 
 params = {
@@ -9,12 +15,7 @@ params = {
     "hourly": "temperature_2m",
 }
 
-response = httpx.get(
-    url,
-    params=params,
-    timeout=10
-    
-)
+response = httpx.get(urlforecast, params=params, timeout=10)
 
 print(response.status_code)
 
