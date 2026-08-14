@@ -29,6 +29,10 @@ This directory contains the projects, exercises, and code samples for **Week 1**
 - **Headline**: **Stateless Architecture Patterns for LLMs**
 - **Description**: Core concepts and scripts demonstrating stateless request handling and maintaining state externally across model invocations.
 
+### 6. `1.5  Batch mode`
+- **Headline**: **Batch & Concurrent LLM Processing with Concurrency Control**
+- **Description**: Demonstrates processing multiple prompts asynchronously using `asyncio` and `httpx`. Compares sequential processing vs concurrent batch execution using `asyncio.Semaphore`, featuring rate limiting, automatic backoff retries (handling HTTP 429), and speedup/cost comparison metrics.
+
 ---
 
 ## 🚀 How to Run
@@ -53,6 +57,9 @@ uv run python "week-1/1.2 Your first model call/app.py"
 
 # Run 1.4 Temperature & Context Window experiment
 uv run python "week-1/1.4 Temperature and the context window/app.py"
+
+# Run 1.5 Batch mode experiment
+uv run python "week-1/1.5  Batch mode/app.py"
 ```
 
 For FastAPI services (e.g. `1.3 Token and cost reporting`):

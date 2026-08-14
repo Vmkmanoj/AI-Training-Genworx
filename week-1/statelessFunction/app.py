@@ -9,7 +9,8 @@ api_key = os.getenv("GROQ_API_KEY")
 
 conversation = []
 
-url = "https://api.groq.com/openai/v1/responses"
+url = os.getenv("url")
+
 
 headers = {
     "Authorization": f"Bearer {api_key}",
@@ -32,7 +33,7 @@ while True:
     payload = {
         "model": "llama-3.3-70b-versatile",
         "input": conversation,
-        "temperature": 1,
+        "temperature": 0.7,
     }
 
     response = httpx.post(

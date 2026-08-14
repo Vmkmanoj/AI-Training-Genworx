@@ -20,7 +20,8 @@ api_key = os.getenv("GROQ_API_KEY")
 
 app = FastAPI()
 
-url = "https://api.groq.com/openai/v1/responses"
+url = os.getenv("url")
+
 
 headers = {
     "Authorization": f"Bearer {api_key}",
