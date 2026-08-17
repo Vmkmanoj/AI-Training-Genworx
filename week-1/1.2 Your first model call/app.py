@@ -27,10 +27,10 @@ while True:
         break
 
     payload = {
-    "model": "llama-3.3-70b-versatile",
-    "input": inp,
-    "temperature": 1,
-   }
+        "model": "openai/gpt-oss-20b",
+        "messages": [{"role": "user", "content": inp}],
+        "temperature": 0.7,
+    }
 
     response = httpx.post(
         url,
@@ -43,4 +43,4 @@ while True:
 
     data = response.json()
 
-    print(data["output"][1]["content"][0]["text"])
+    print(data["choices"][0]["message"]["content"])
