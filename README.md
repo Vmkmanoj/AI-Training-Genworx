@@ -84,10 +84,46 @@ This directory contains a unified framework and benchmark scripts to evaluate an
 
 ---
 
+## 📊 Benchmark Results Comparison
+
+Prompt tested: *"What is the capital of France?"*
+
+### 1. `OpenRouterModel` (`nvidia/nemotron-nano-9b-v2:free`)
+```text
+Answer: 
+
+The capital of France is **Paris**.
+
+Input tokens: 19
+Output tokens: 159
+Total tokens: 178
+Latency: 19.77s
+```
+
+### 2. `OpenRouterModel` (`openai/gpt-oss-20b:free`)
+```text
+Answer: The capital of France is **Paris**.
+Input tokens: 74
+Output tokens: 40
+Total tokens: 114
+Latency: 2.22s
+```
+
+### 3. `GroqModel` (`openai/gpt-oss-20b`)
+```text
+Answer: The capital of France is **Paris**.
+Input tokens: 78
+Output tokens: 40
+Total tokens: 118
+Latency: 0.54s
+```
+
+---
+
 ## 🚀 How to Run
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.12+
 - `uv` package manager
 - Set required API keys in `.env` at the root directory:
   ```env

@@ -25,6 +25,7 @@ if not url:
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json",
+    "groq-version": "2024-04-15",
 }
 
 INPUT_COST_PER_1M = 0.15

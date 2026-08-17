@@ -16,6 +16,7 @@ if not url:
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json",
+    "groq-version": "2024-04-15",
 }
 
 MODEL = "llama-3.3-70b-versatile"

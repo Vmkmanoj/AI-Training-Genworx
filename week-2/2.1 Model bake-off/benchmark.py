@@ -7,11 +7,11 @@ from models.groq import GroqModel
 # )
 
 
-model = OpenRouterModel(
-    "nvidia/nemotron-nano-9b-v2:free"
-)
+# model = OpenRouterModel(
+#     "nvidia/nemotron-nano-9b-v2:free"
+# )
 
-# model = GroqModel("llama-3.3-70b-versatile")
+model = GroqModel("openai/gpt-oss-20b")
 
 
 messages = [
