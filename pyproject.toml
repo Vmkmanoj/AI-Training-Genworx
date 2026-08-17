@@ -10,7 +10,9 @@ requires-python = ">=3.12"
 dependencies = [
     "dotenv>=0.9.9",
     "fastapi>=0.141.1",
+    "groq>=1.6.0",
     "httpx>=0.28.1",
+    "openrouter>=1.1.58",
     "ruff>=0.16.2",
     "uvicorn>=0.52.1",
 ]
@@ -21,3 +23,7 @@ ai-training-genworx = "ai_training_genworx:main"
 [build-system]
 requires = ["uv_build>=0.12.1,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.pyright]
+extraPaths = ["week-2/2.1 Model bake-off"]
+

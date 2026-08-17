@@ -10,10 +10,15 @@ api_key = os.getenv("GROQ_API_KEY")
 url = os.getenv("url")
 
 
+if not url:
+    raise ValueError("The 'url' environment variable is missing or not set.")
+
+
+
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json",
-    
+    "groq-version": "2024-04-15",
 }
 
 while True:
@@ -22,10 +27,10 @@ while True:
         break
 
     payload = {
-    "model": "llama-3.3-70b-versatile",
-    "input": inp,
-    "temperature": 1,
-   }
+        "model": "openai/gpt-oss-20b",
+        "messages": [{"role": "user", "content": inp}],
+        "temperature": 0.7,
+    }
 
     response = httpx.post(
         url,
@@ -38,4 +43,4 @@ while True:
 
     data = response.json()
 
-    print(data["output"][1]["content"][0]["text"])
+    print(data["choices"][0]["message"]["content"])
