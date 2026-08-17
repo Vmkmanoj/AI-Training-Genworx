@@ -17,6 +17,10 @@ api_key = os.getenv("GROQ_API_KEY")
 MODEL = "llama-3.3-70b-versatile"
 url = os.getenv("url")
 
+if not url:
+    raise ValueError("The 'url' environment variable is missing or not set.")
+
+
 
 headers = {
     "Authorization": f"Bearer {api_key}",

@@ -9,6 +9,11 @@ import os
 urlforecast = os.getenv("urlforecast")
 
 
+if not urlforecast:
+    raise ValueError("The 'url' environment variable is missing or not set.")
+
+
+
 params = {
     "latitude": 52.52,
     "longitude": 13.41,

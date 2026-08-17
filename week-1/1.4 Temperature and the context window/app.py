@@ -6,8 +6,11 @@ import httpx
 load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
-
 url = os.getenv("url")
+
+if not url:
+    raise ValueError("The 'url' environment variable is missing or not set.")
+
 
 
 headers = {

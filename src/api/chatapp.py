@@ -23,6 +23,11 @@ app = FastAPI()
 url = os.getenv("url")
 
 
+if not url:
+    raise ValueError("The 'url' environment variable is missing or not set.")
+
+
+
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json",
