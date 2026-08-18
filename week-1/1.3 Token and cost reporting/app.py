@@ -40,10 +40,11 @@ conversation_summary = ""
 
 
 def call_groq(input_data):
+    
     payload = {
-        "model": "llama-3.3-70b-versatile",
-        "input": input_data,
-        "temperature": 0,
+        "model": "openai/gpt-oss-20b",
+        "messages": [{"role": "user", "content": input_data}],
+        "temperature": 0.7,
     }
 
     response = httpx.post(

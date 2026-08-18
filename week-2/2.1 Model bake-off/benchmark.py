@@ -7,9 +7,9 @@ from models.groq import GroqModel
 # )
 
 
-# model = OpenRouterModel(
-#     "nvidia/nemotron-nano-9b-v2:free"
-# )
+model = OpenRouterModel(
+    "nvidia/nemotron-nano-9b-v2:free"
+)
 
 model = GroqModel("openai/gpt-oss-20b")
 
