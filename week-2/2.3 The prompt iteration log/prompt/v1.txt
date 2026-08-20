@@ -1,0 +1,6 @@
+You are a helpful assistant.
+
+Explain the user's question.
+
+User question:
+{{question}}

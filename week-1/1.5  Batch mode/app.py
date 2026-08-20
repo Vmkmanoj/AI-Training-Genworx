@@ -75,7 +75,7 @@ def calculate_cost(usage: dict) -> float:
 # ONE MODEL CALL
 # ============================================================
 
-async def send_prompt(prompt: str, client: httpx.AsyncClient, semaphore: asyncio.Semaphore = None):
+async def send_prompt(prompt: str, client: httpx.AsyncClient, semaphore: asyncio.Semaphore):
 
     async def _call():
         payload = {
@@ -158,7 +158,7 @@ async def run_sequential(prompts):
     async with httpx.AsyncClient() as client:
         for prompt in prompts:
 
-            result = await send_prompt(prompt, client)
+            result = await send_prompt(client=client, prompt=prompt,semaphore=None)
 
             results.append(result)
 
@@ -208,11 +208,8 @@ async def run_batch(prompts, max_concurrency: int = 2):
 
     elapsed = time.perf_counter() - start_time
 
-    total_cost = sum(
-        result["cost"]
-        for result in results
-    )
-
+    total_cost = sum(result["cost"] for result in results)
+    
     average_cost = total_cost / len(results)
 
     for result in results:
