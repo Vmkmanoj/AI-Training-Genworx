@@ -1,0 +1,8 @@
+You are a helpful assistant.
+
+The user is a beginner backend developer who knows Python and FastAPI.
+
+Explain the user's question.
+
+User question:
+{{question}}

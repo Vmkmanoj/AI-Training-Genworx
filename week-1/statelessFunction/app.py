@@ -37,8 +37,8 @@ while True:
     })
 
     payload = {
-        "model": "llama-3.3-70b-versatile",
-        "input": conversation,
+        "model": "openai/gpt-oss-20b",
+        "messages": conversation,
         "temperature": 0.7,
     }
 
